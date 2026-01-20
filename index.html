@@ -10,25 +10,33 @@
     <!--my extra meta tag for author of the webpage    -->
     <meta name="robots" content="index, follow" />
     <!--my extra meta tag tells search engines whether to index the page.   -->
+    <!-- Google Font Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+            <link href="css/index.css" rel="stylesheet">
   </head>
   <body>
+    <div class="heading">
     <h1>Hanna Kovalenko</h1>
+    <img class="profilePhoto" src="pictures/profilePhoto.jpg" alt="Photo of Hanna Kovalenko smiling">
+
+    </div>
     <section id="About">
-      <h2>About</h2>
+      <h2 class="headings">About</h2>
       <p>
         I am a student in Code the Dream Introductory Training Course. I am
         learning html right now but later I will learn CSS as well.
       </p>
     </section>
     <section id="Experience">
-      <h2>Experience</h2>
+      <h2 class="headings">Experience</h2>
       <ul>
         <li>
-          <strong
-            >SkillUp IT Specialists Training Centre Oct’21 - Dec’21</strong
-          >
+          <strong>SkillUp IT Specialists Training Centre Oct’21 - Dec’21</strong>
           <ul>
-            <li>Tasks related to QC:</li>
+            <li class="task-related">Tasks related to QC:</li>
             <ul>
               <li>Functional, non-functional testing</li>
               <li>Bug reporting and issue tracking</li>
@@ -46,7 +54,7 @@
         <li>
           <strong>STEP IT Academy, Kremenchuk, Ukraine Nov’19 - May’22 </strong>
           <ul>
-            <li>Tasks related to software developer:</li>
+            <li class="task-related">Tasks related to software developer:</li>
             <ul>
               <li>Client/Server Applications (Basic knowledge)</li>
               <li>OOP, SQL (Basic knowledge)</li>
@@ -57,7 +65,7 @@
               </li>
               <li>
                 Final Project - Client/Server Application as the analogue of
-                already existed <a href="https://xtiles.app/" target="_blank">“X-tiles”</a>
+                already existed <a href="https://xtiles.app/" target="_blank" class="my-link">“X-tiles”</a>
                 ( Front-end in Vue3.js in connection with Figma/Anima)
               </li>
             </ul>
@@ -69,10 +77,9 @@
         <li>
           <strong
             >TekArch company – educational and placement company, USA
-            May’23-August'24</strong
-          >
+            May’23-August'24</strong>
           <ul>
-            <li>Tasks related to QA:</li>
+            <li class="task-related">Tasks related to QA:</li>
             <ul>
               <li>Client/Server Applications (Basic knowledge)</li>
               <li>Java programming language</li>
@@ -87,27 +94,32 @@
     </section>
 
     <section id="Connect">
-      <h2>Connect</h2>
-      <ul>
-        <li>
+      <div class="move">
+      <h2 class="headings">Connect</h2>
+      <ul id="connect-section">
+        <li class="link-style">
+          <img id="linkedInLogo" src="pictures/linkedInLogo.jpg" alt="Blue LinkedIn logo with the letters 'in'">
           <a
             href="https://www.linkedin.com/in/hanna-v-kovalenko/"
-            target="_blank"
+            target="_blank" class="my-link"
           >
             LinkedIn</a
           >
         </li>
-        <li>
-          <a href="https://github.com/AnnetKo-art" target="_blank">Github</a>
+        <li class="link-style">
+          <img id="gitHubLogo" src="pictures/gitHubLogo.jpg" alt="a black cat on the white background">
+          <a href="https://github.com/AnnetKo-art" target="_blank" class="my-link">Github</a>
         </li>
-        <li>
+        <li class="link-style">
+          <img id="instagramLogo" src="pictures/instagramLogo.png" alt="instagram logo">
           <a
             href="https://www.instagram.com/getinspiredbycurves/"
-            target="_blank"
+            target="_blank" class="my-link"
             >Instagram</a
           >
         </li>
       </ul>
+      </div>
     </section>
   </body>
 </html>
