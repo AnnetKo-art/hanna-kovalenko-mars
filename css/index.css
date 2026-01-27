@@ -1,0 +1,102 @@
+
+body {font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style:normal;
+  color: darkblue;
+  font-size: 18px; 
+  background-color: rgb(253, 255, 142);
+}
+/* HEADERS STYLE*/
+/*centering of h1 */
+.heading{
+text-align: center;
+
+}
+
+h1{
+font-size: 36px;   
+font-weight: 800; 
+color:rgb(134, 0, 134);
+border: 3px dashed brown;
+background:aqua;
+padding: 10px;
+display: inline-block; /* makes the border according to the length of the content*/
+}
+
+.profilePhoto{
+display: block;        /* forces it onto its own line */
+margin: 0 auto ;      
+width: 160px;          /* adjust size as needed */
+border: 3px dashed brown;  
+    
+}
+
+
+.headings{
+font-size: 28px;
+font-weight: 700;   
+color:rgb(137, 10, 234);
+}
+
+/*For all the sections style*/
+section{
+    padding:5px;
+    margin:10px;
+}
+
+/*EXPERIENCE SECTION STYLE*/
+.my-link{
+    color:rgb(137, 10, 234);
+}
+
+strong {
+  background-color: aqua;
+  border: 2px solid brown;
+  display: inline-block;   /*key line to change margin because strong is an inline block */
+  margin: 10px 0;          
+  padding: 5px;
+}
+
+li.task-related{
+border: 2px solid darkblue;
+border-radius: 8px;
+list-style: none; /* removes bullets */
+padding:10px;
+margin:10px;
+ display: inline-block;
+}
+
+/*blocking style for CONNECT section*/
+
+.move{
+    margin: 0 auto;
+    width:fit-content;
+    text-align:center;
+}
+
+#connect-section ul{
+  list-style: none; /* removes bullets */
+    padding: 0;
+
+}
+
+li.link-style{
+    display: block;   /* Turn each item into a block */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid darkblue;
+    border-radius: 8px;
+    background-color: #fcdef6;    
+}
+
+#linkedInLogo{
+    width:40px;
+    margin-right:10px;
+}
+#gitHubLogo{
+    width:40px;
+    margin-right:20px;
+}
+#instagramLogo{
+    width:40px;
+}
