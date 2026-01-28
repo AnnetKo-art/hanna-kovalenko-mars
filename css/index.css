@@ -1,13 +1,51 @@
 
-body {font-family: "Roboto", sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-style:normal;
   color: darkblue;
   font-size: 18px; 
   background-color: rgb(253, 255, 142);
+  padding-top: 10px;
 }
-/* HEADERS STYLE*/
-/*centering of h1 */
+
+/* ----Navigation Menu Styling-----*/
+.nav_container{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: 20px; 
+
+}
+
+#navigation {
+  position: sticky;
+  top: 0;
+  background: rgb(253, 255, 142);
+  width: 100%;
+  z-index: 1000;
+}
+
+/*  work with links from Navigation menu and Connect section in Footer  */
+
+.nav_container a,
+.connect-card a {
+  text-decoration: none;  /* remove underline */
+  font-weight: 800;       /* bold */
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.nav_container a:hover,
+.connect-card a:hover {
+  color: #0077ff;
+  opacity: 0.8;
+}
+
+/* -----HEADERS STYLE------*/
+/*---centering of h1--- */
 .heading{
 text-align: center;
 
@@ -36,6 +74,7 @@ border: 3px dashed brown;
 font-size: 28px;
 font-weight: 700;   
 color:rgb(137, 10, 234);
+/*text-align:center;*/
 }
 
 /*For all the sections style*/
@@ -45,58 +84,100 @@ section{
 }
 
 /*EXPERIENCE SECTION STYLE*/
+
+.experience-container{
+    display:flex;
+    gap:20px;
+    
+}
+
+.skill_up_container_exp,.step_it_container_exp,.tekarch_container_exp{
+    background-color:rgb(253, 249, 254);
+    padding:15px;
+    border-radius:6px;
+    border:1px solid darkblue;
+}
+
+.exp-header{
+    width: 100%;
+  text-align: center;
+}
+
+#step_header_correction, .tekarch_header_correction, .skillup_header_correction{
+   background-color: aqua;
+  border: 2px solid brown;
+  border-radius:6px;
+  margin: 10px 0;  
+  font-weight: bold;       
+  
+}
 .my-link{
     color:rgb(137, 10, 234);
 }
+/* STYLING OF THE UL -LI IN EXPERIENCE SECTION */
 
-strong {
-  background-color: aqua;
-  border: 2px solid brown;
-  display: inline-block;   /*key line to change margin because strong is an inline block */
-  margin: 10px 0;          
-  padding: 5px;
+#experience ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+#experience ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+#experience ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1a7f37;      
+  font-weight: 700;
+  font-size: 14px;
 }
 
-li.task-related{
+
+
+.task-related{
 border: 2px solid darkblue;
 border-radius: 8px;
 list-style: none; /* removes bullets */
 padding:10px;
 margin:10px;
  display: inline-block;
+
+ 
 }
 
-/*blocking style for CONNECT section*/
-
+/*STYLE for CONNECT section*/
 .move{
     margin: 0 auto;
     width:fit-content;
     text-align:center;
 }
 
-#connect-section ul{
-  list-style: none; /* removes bullets */
-    padding: 0;
-
+#linkedInLogo,
+#gitHubLogo,
+#instagramLogo {
+  width: 40px;
 }
 
-li.link-style{
-    display: block;   /* Turn each item into a block */
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 2px solid darkblue;
-    border-radius: 8px;
-    background-color: #fcdef6;    
+.connect-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.connect-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  border: 2px solid darkblue;
+  border-radius: 8px;
+  background-color: #fcdef6;
+  min-width: 160px;
+  justify-content: center;
 }
 
-#linkedInLogo{
-    width:40px;
-    margin-right:10px;
-}
-#gitHubLogo{
-    width:40px;
-    margin-right:20px;
-}
-#instagramLogo{
-    width:40px;
-}
+
