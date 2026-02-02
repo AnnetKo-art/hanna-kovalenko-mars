@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Hanna Kovalenko's Portfolio</title>
@@ -11,114 +11,183 @@
     <meta name="robots" content="index, follow" />
     <!--my extra meta tag tells search engines whether to index the page.   -->
     <!-- Google Font Roboto -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  
-            <link href="css/index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Font Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="css/index.css" rel="stylesheet" />
   </head>
   <body>
+    <nav id="navigation">
+      <div class="nav_container">
+        <div><a href="#about">About</a></div>
+        <div><a href="#experience">Experience</a></div>
+        <div><a href="#skills">Skills</a></div>
+        <div><a href="#projects">Projects</a></div>
+        <div><a href="#connect">Connect</a></div>
+      </div>
+      <!--
+      <ul>
+        <li> <a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>-->
+    </nav>
     <div class="heading">
-    <h1>Hanna Kovalenko</h1>
-    <img class="profilePhoto" src="pictures/profilePhoto.jpg" alt="Photo of Hanna Kovalenko smiling">
-
+      <h1>Hanna Kovalenko</h1>
+      <img
+        class="profilePhoto"
+        src="pictures/profilePhoto.jpg"
+        alt="Photo of Hanna Kovalenko smiling"
+      />
     </div>
-    <section id="About">
+    <section id="about">
       <h2 class="headings">About</h2>
       <p>
         I am a student in Code the Dream Introductory Training Course. I am
         learning html right now but later I will learn CSS as well.
       </p>
     </section>
-    <section id="Experience">
+    <section id="experience">
       <h2 class="headings">Experience</h2>
-      <ul>
-        <li>
-          <strong>SkillUp IT Specialists Training Centre Oct’21 - Dec’21</strong>
-          <ul>
-            <li class="task-related">Tasks related to QC:</li>
-            <ul>
-              <li>Functional, non-functional testing</li>
-              <li>Bug reporting and issue tracking</li>
-              <li>Requirements clarification</li>
-              <li>Creation of Test Suites and Test Cases</li>
-              <li>
-                Tasks related to management: planning, allocation, and tracking
-                inside a team
-              </li>
-            </ul>
-          </ul>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <strong>STEP IT Academy, Kremenchuk, Ukraine Nov’19 - May’22 </strong>
-          <ul>
-            <li class="task-related">Tasks related to software developer:</li>
-            <ul>
-              <li>Client/Server Applications (Basic knowledge)</li>
-              <li>OOP, SQL (Basic knowledge)</li>
-              <li>WordPress, Drupal (Basic knowledge)</li>
-              <li>
-                Java, JavaScript, PHP, HTML, CSS, Asp.net, Ado.net, WPF, C++, C#
-                (Basic knowledge)
-              </li>
-              <li>
-                Final Project - Client/Server Application as the analogue of
-                already existed <a href="https://xtiles.app/" target="_blank" class="my-link">“X-tiles”</a>
-                ( Front-end in Vue3.js in connection with Figma/Anima)
-              </li>
-            </ul>
-          </ul>
-        </li>
-      </ul>
+      <div class="experience-container">
+        <div class="skill_up_container_exp">
+          <div class="exp-header">
+            <div class="skillup_header_correction">
+              <p>SkillUp IT Specialists Training Centre Oct’21 - Dec’21</p>
+            </div>
+            <div class="task-related">Tasks related to QC:</div>
+          </div>
 
-      <ul>
-        <li>
-          <strong
-            >TekArch company – educational and placement company, USA
-            May’23-August'24</strong>
           <ul>
-            <li class="task-related">Tasks related to QA:</li>
-            <ul>
-              <li>Client/Server Applications (Basic knowledge)</li>
-              <li>Java programming language</li>
-              <li>Selenium, Cucumber, Jenkins, Git, GitHub, TestNG, Maven</li>
-              <li>Jira, Agile</li>
-              <li>API testing (Basic knowledge)</li>
-              <li>Mobile testing (Basic knowledge)</li>
-            </ul>
+            <li>Functional, non-functional testing</li>
+            <li>Bug reporting and issue tracking</li>
+            <li>Requirements clarification</li>
+            <li>Creation of Test Suites and Test Cases</li>
+            <li>
+              Tasks related to management: planning, allocation, and tracking
+              inside a team
+            </li>
           </ul>
-        </li>
-      </ul>
+        </div>
+        <div class="step_it_container_exp">
+          <div class="exp-header">
+            <div id="step_header_correction">
+              <p>STEP IT Academy, Kremenchuk, Ukraine Nov’19 - May’22</p>
+            </div>
+
+            <div class="task-related">Tasks related to software developer:</div>
+          </div>
+
+          <ul>
+            <li>Client/Server Applications (Basic knowledge)</li>
+            <li>OOP, SQL (Basic knowledge)</li>
+            <li>WordPress, Drupal (Basic knowledge)</li>
+            <li>
+              Java, JavaScript, PHP, HTML, CSS, Asp.net, Ado.net, WPF, C++, C#
+              (Basic knowledge)
+            </li>
+            <li>
+              Final Project - Client/Server Application as the analogue of
+              already existed
+              <a href="https://xtiles.app/" target="_blank" class="my-link"
+                >“X-tiles”</a
+              >
+              ( Front-end in Vue3.js in connection with Figma/Anima)
+            </li>
+          </ul>
+        </div>
+        <div class="tekarch_container_exp">
+          <div class="exp-header">
+            <div class="tekarch_header_correction">
+              <p>
+                TekArch company – educational and placement company, USA
+                May’23-August'24
+              </p>
+            </div>
+
+            <div class="task-related">Tasks related to QA:</div>
+          </div>
+
+          <ul>
+            <li>Client/Server Applications (Basic knowledge)</li>
+            <li>Java programming language</li>
+            <li>Selenium, Cucumber, Jenkins, Git, GitHub, TestNG, Maven</li>
+            <li>Jira, Agile</li>
+            <li>API testing (Basic knowledge)</li>
+            <li>Mobile testing (Basic knowledge)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <h2 class="headings">Skills</h2>
+    </section>
+    <section id="projects">
+      <h2 class="headings">Projects</h2>
+      <ul></ul>
     </section>
 
-    <section id="Connect">
+    <section id="connect">
       <div class="move">
-      <h2 class="headings">Connect</h2>
-      <ul id="connect-section">
-        <li class="link-style">
-          <img id="linkedInLogo" src="pictures/linkedInLogo.jpg" alt="Blue LinkedIn logo with the letters 'in'">
-          <a
-            href="https://www.linkedin.com/in/hanna-v-kovalenko/"
-            target="_blank" class="my-link"
-          >
-            LinkedIn</a
-          >
-        </li>
-        <li class="link-style">
-          <img id="gitHubLogo" src="pictures/gitHubLogo.jpg" alt="a black cat on the white background">
-          <a href="https://github.com/AnnetKo-art" target="_blank" class="my-link">Github</a>
-        </li>
-        <li class="link-style">
-          <img id="instagramLogo" src="pictures/instagramLogo.png" alt="instagram logo">
-          <a
-            href="https://www.instagram.com/getinspiredbycurves/"
-            target="_blank" class="my-link"
-            >Instagram</a
-          >
-        </li>
-      </ul>
+        <h2 class="headings">Connect</h2>
+
+        <div class="connect-container">
+          <div class="connect-card">
+            <img
+              id="linkedInLogo"
+              src="pictures/linkedInLogo.jpg"
+              alt="Blue LinkedIn logo with the letters 'in'"
+            />
+            <a
+              href="https://www.linkedin.com/in/hanna-v-kovalenko/"
+              target="_blank"
+              class="my-link"
+            >
+              LinkedIn
+            </a>
+          </div>
+
+          <div class="connect-card">
+            <img
+              id="gitHubLogo"
+              src="pictures/gitHubLogo.jpg"
+              alt="a black cat on the white background"
+            />
+            <a
+              href="https://github.com/AnnetKo-art"
+              target="_blank"
+              class="my-link"
+            >
+              Github
+            </a>
+          </div>
+
+          <div class="connect-card">
+            <img
+              id="instagramLogo"
+              src="pictures/instagramLogo.png"
+              alt="instagram logo"
+            />
+            <a
+              href="https://www.instagram.com/getinspiredbycurves/"
+              target="_blank"
+              class="my-link"
+            >
+              Instagram
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </body>
