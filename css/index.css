@@ -1,23 +1,30 @@
+/*--DESKTOP  VERSION --*/
+
+html {
+  /* Default browser font size is 16px. 
+     62.5% of 16px is 10px. 
+     This makes 1rem = 10px for easier math. */
+  font-size: 62.5%; 
+}
 
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
-  font-style:normal;
+  font-style: normal;
   color: darkblue;
-  font-size: 18px; 
+  font-size: 1.8rem;
   background-color: rgb(253, 255, 142);
-  padding-top: 10px;
+  padding: 1em;  /* This will apply to all sides equally */
 }
 
 /* ----Navigation Menu Styling-----*/
 .nav_container{
     display:flex;
     align-items:center;
-    gap:50px;
+    gap:5em; /* 50px */
     justify-content: center;
-    padding-top: 10px;
-    font-size: 20px; 
-
+    padding-top: 1em;
+    font-size: 2rem; 
 }
 
 #navigation {
@@ -37,7 +44,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-
 .nav_container a:hover,
 .connect-card a:hover {
   color: #0077ff;
@@ -47,73 +53,75 @@ body {
 /* -----HEADERS STYLE------*/
 /*---centering of h1--- */
 .heading{
-text-align: center;
-
+  text-align: center;
 }
 
-h1{
-font-size: 36px;   
-font-weight: 800; 
-color:rgb(134, 0, 134);
-border: 3px dashed brown;
-background:aqua;
-padding: 10px;
-display: inline-block; /* makes the border according to the length of the content*/
+h1 {
+  font-size: 3.6rem;     /* 36px */
+  font-weight: 800;
+  color: rgb(134, 0, 134);
+  border: 3px dashed brown;
+  background: aqua;
+  padding: 1em;        /* 10px → em */
+  display: inline-block; /* makes the border according to the length of the content*/
 }
 
 .profilePhoto{
-display: block;        /* forces it onto its own line */
-margin: 0 auto ;      
-width: 160px;          /* adjust size as needed */
-border: 3px dashed brown;  
-    
+  display: block;        /* forces it onto its own line */
+  margin: 0 auto;      
+  width: 20%;            /* responsive instead of fixed px */
+  max-width: 16rem;      /* keeps original visual size */
+  border: 3px dashed brown;  
 }
 
-
 .headings{
-font-size: 28px;
-font-weight: 700;   
-color:rgb(137, 10, 234);
-/*text-align:center;*/
+  font-size: 2.8rem;
+  font-weight: 700;   
+  color:rgb(137, 10, 234);
+  /*text-align:center;*/
 }
 
 /*For all the sections style*/
 section{
-    padding:5px;
-    margin:10px;
+    padding: 0.5em;
+    margin:1em;
 }
 
 /*EXPERIENCE SECTION STYLE*/
 
 .experience-container{
     display:flex;
-    gap:20px;
-    
+    gap:2em;
 }
 
-.skill_up_container_exp,.step_it_container_exp,.tekarch_container_exp{
+.skill_up_container_exp,
+.step_it_container_exp,
+.tekarch_container_exp{
     background-color:rgb(253, 249, 254);
-    padding:15px;
+    padding:1.5em;
     border-radius:6px;
     border:1px solid darkblue;
 }
 
 .exp-header{
-    width: 100%;
+  width: 100%;
   text-align: center;
 }
 
-#step_header_correction, .tekarch_header_correction, .skillup_header_correction{
-   background-color: aqua;
+#step_header_correction,
+.tekarch_header_correction,
+.skillup_header_correction{
+  background-color: aqua;
   border: 2px solid brown;
   border-radius:6px;
-  margin: 10px 0;  
+  margin: 1em 0;  
   font-weight: bold;       
-  
 }
+
 .my-link{
     color:rgb(137, 10, 234);
 }
+
 /* STYLING OF THE UL -LI IN EXPERIENCE SECTION */
 
 #experience ul {
@@ -121,12 +129,14 @@ section{
   padding-left: 0;
   margin: 0;
 }
+
 #experience ul li {
   position: relative;
-  padding-left: 28px;
-  margin-bottom: 10px;
+  padding-left: 2.8em; /* 28px */
+  margin-bottom: 1em;
   line-height: 1.4;
 }
+
 #experience ul li::before {
   content: "✔";
   position: absolute;
@@ -134,50 +144,223 @@ section{
   top: 0;
   color: #1a7f37;      
   font-weight: 700;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
-
-
 .task-related{
-border: 2px solid darkblue;
-border-radius: 8px;
-list-style: none; /* removes bullets */
-padding:10px;
-margin:10px;
- display: inline-block;
-
- 
+  border: 2px solid darkblue;
+  border-radius: 8px;
+  list-style: none; /* removes bullets */
+  padding:1em;
+  margin:1em;
+  display: inline-block;
 }
 
 /*STYLE for CONNECT section*/
 .move{
     margin: 0 auto;
-    width:fit-content;
+    width: fit-content;
     text-align:center;
 }
 
 #linkedInLogo,
 #gitHubLogo,
 #instagramLogo {
-  width: 40px;
+  width: 4rem;
 }
 
 .connect-container {
   display: flex;
-  gap: 20px;
+  gap: 2em;
   justify-content: center;
 }
+
 .connect-card {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 15px 20px;
+  gap: 2em;
+  padding: 1.5em 2em;
   border: 2px solid darkblue;
   border-radius: 8px;
   background-color: #fcdef6;
-  min-width: 160px;
+  min-width: 16rem;
   justify-content: center;
 }
 
+/* ---MOBILE    VERSION    MEDIA QUERY -----*/
 
+@media (max-width: 600px) {
+
+  * {
+    box-sizing: border-box;/*Makes padding and borders included in the element's total width.*/
+  }
+
+  /*Removes ALL space around the body.*/
+  body {
+    padding: 0;
+    margin: 0;
+    background-color:lightcyan;
+    font-size:1.4rem;
+  }
+
+  #navigation {
+    position: static;
+    width: 100%; /*Takes full width of screen*/
+    margin: 0; /*No extra space around it*/
+    padding: 0; /*No extra space around it*/
+    
+    
+  }
+
+  .nav_container {
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1em 0;/* top and bottom padding but not left or right*/
+    margin: 0;
+    font-size:1.4rem;
+    
+  }
+
+
+h1{
+font-size: 2rem;
+border: 2px solid brown;
+  background: lightpink;
+  padding: 0.2em;        
+  font-style: italic;
+  font-weight:500;
+}
+
+.profilePhoto{       
+  width: 34%;            
+  border: 2px solid brown;  
+}
+
+  .headings{
+  font-size: 1.8rem;
+  font-weight: 500;   
+  color:rgb(137, 10, 234);  
+  text-align:center;
+}
+
+  .nav_container a {
+    display: block; /*Makes each link take full width*/
+    padding:  0;
+    color:brown;
+  }
+
+  section {
+    padding: 1.5em;
+    margin: 0;
+    width: 100%; /*ensures full width*/
+  }
+
+
+  /* experience container */
+  .experience-container {
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* experience card changies */
+  .skill_up_container_exp,
+  .step_it_container_exp,
+  .tekarch_container_exp {
+    width: 100%; /*each card takes full width of its container*/
+    margin: 0;
+    padding: 1.5em;
+    background-color: rgb(246, 239, 239);
+  }
+
+  /* connect section change */
+  .connect-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .connect-card {
+    width: 100%;
+    background-color: rgb(246, 239, 239);
+  }
+}
+
+/*-- TABLET MEDIA QUERY --*/
+@media (min-width: 601px) and (max-width: 900px) {
+  
+  body {
+    background-color: rgb(210, 250, 224);
+    font-size: 1.6rem;
+  }
+
+  #navigation {
+    position: static;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav_container {
+    display: grid;  
+    grid-template-columns: 1fr;  /* Single column layout */
+    justify-items: center;  /* Center items horizontally */
+    gap: 0.5em;
+    padding: 1em 0;
+    margin: 0;
+    font-size: 1.4rem;
+  }
+h1{
+font-size: 2.8rem;
+border: 2px solid brown;
+  background: lightpink;
+  padding: 0.2em;        
+  font-weight:500;
+
+
+}
+  
+.profilePhoto{       
+  width: 34%;            
+  border: 2px solid brown;  
+}
+.headings{
+  font-size: 2rem;
+  font-weight: 700;   
+  color:rgb(137, 10, 234);
+  text-align: center;
+ 
+}
+ 
+/* Experience */
+  .experience-container {
+    display: grid;
+    grid-template-columns: minmax(300px, 520px);
+    justify-content: center;
+    gap: 1.5em;
+     padding: 2rem 1rem;
+  }
+
+ /* Connect */
+  .connect-container {
+    display: grid;
+    grid-template-columns: minmax(300px, 520px);/* Creates one column that's minimum 300px, maximum 520px wide */
+    justify-content: center;/* Centers the grid column horizontally on the page */
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .connect-card {
+    display: grid;
+    grid-template-columns: auto auto;  /* Creates two columns, both sized to fit their content (icon and text) */
+    width: 100%;/* Makes the card fill the full width of its grid column */
+    box-sizing: border-box;/* Includes padding and border in the total width calculation */
+    align-items: center;/* Vertically centers the icon and text within the card */
+    gap: 1rem;
+    justify-content: center;  /* centers the grid content horizontally */
+    padding: 1.5em;
+}
+  
+}
