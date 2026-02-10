@@ -56,22 +56,31 @@ body {
   text-align: center;
 }
 
+
 h1 {
-  font-size: 3.6rem;     /* 36px */
+  font-size: 3.6rem;/* 36px */
   font-weight: 800;
   color: rgb(134, 0, 134);
-  border: 3px dashed brown;
+
   background: aqua;
-  padding: 1em;        /* 10px → em */
-  display: inline-block; /* makes the border according to the length of the content*/
+  padding: 1em 1.75em;
+
+  border: 3px dashed brown;
+  border-radius: 1.5em;/* 10px → em */
+
+  display: inline-block;/* makes the border according to the length of the content*/
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-.profilePhoto{
-  display: block;        /* forces it onto its own line */
-  margin: 0 auto;      
-  width: 20%;            /* responsive instead of fixed px */
-  max-width: 16rem;      /* keeps original visual size */
-  border: 3px dashed brown;  
+.profilePhoto {
+  display: block;/* forces it onto its own line */
+  margin: 0 auto;
+  width: 20%;/* responsive instead of fixed px */
+  max-width: 16rem;/* keeps original visual size */
+  background-color: white;
+  border: 3px dashed brown;
+  border-radius: 1.5em;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
 }
 
 .headings{
@@ -187,6 +196,28 @@ section{
   justify-content: center;
 }
 
+/* SKILLS */
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+/* Skill item */
+#skills ul li {
+  background-color: #f3f0ff;        /* soft lavender */
+  border: 2px solid #6a4cff;        
+  border-radius: 2em;             
+  padding: 0.5em 1.25em;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #4b2bbd;
+}
+
+
 /* ---MOBILE    VERSION    MEDIA QUERY -----*/
 
 @media (max-width: 600px) {
@@ -273,6 +304,13 @@ border: 2px solid brown;
     padding: 1.5em;
     background-color: rgb(246, 239, 239);
   }
+/* Skills - media phone */
+#skills ul li {
+  
+  font-size: 1.4rem;
+  font-weight: 500;
+  
+}
 
   /* connect section change */
   .connect-container {
@@ -362,5 +400,28 @@ border: 2px solid brown;
     justify-content: center;  /* centers the grid content horizontally */
     padding: 1.5em;
 }
+
+/*skills - media Tablet*/
+#skills ul {
+  display: grid;
+  grid-template-columns: minmax(300px, 520px);
+  gap: 1rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+#skills ul li {
+  background-color: #f3f0ff;          
+  border: 1px solid #d6ccff;          
+  border-radius: 12px;                
+  padding: 0.75em 1.25em;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #4b2bbd;                     
+
+}
   
 }
+
