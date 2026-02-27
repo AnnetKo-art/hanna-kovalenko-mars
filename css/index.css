@@ -219,6 +219,44 @@ section{
   color: #4b2bbd;
 }
 
+/* PROJECT SECTION */
+#projects {
+  width: 80%;
+  margin: 3.75rem auto;
+  text-align: center;
+}
+
+#projects ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+/* Project card */
+#projects li {
+  background-color: #f3f0ff;        /* soft lavender */
+  border: 2px solid #6a4cff;
+  border-radius: 1.25rem; 
+  color: #1d1d8f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1em 1.5em;
+  width: 16rem;
+  min-height: 3.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  /* Text wrapping instead of overflowing */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;        /* ensure wrapping is allowed */
+}
+
 /*----FORM LAYOUT ------*/
 #leaveMessage{
   display: flex;
@@ -424,6 +462,21 @@ border: 2px solid brown;
     width: 100%;
     background-color: rgb(246, 239, 239);
   }
+
+
+/* PROJECT SECTION - Phone Media Update */
+#projects {
+  width: 95%;
+  margin: 3.75rem auto;
+  text-align: center;
+}
+
+#projects li {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  padding: 0.6em 1em;
+}
+
 }
 
 /*-- TABLET MEDIA QUERY --*/
