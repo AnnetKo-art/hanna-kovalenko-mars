@@ -95,3 +95,28 @@ messageForm.addEventListener("submit", function(event) {
 
 });
 
+//FETCH API - PROJECT SECTION
+fetch("https://api.github.com/users/AnnetKo-art/repos")
+// Convert the response into JSON format
+.then(function(response){
+  return response.json();
+})
+// Work with the array of repositories returned from GitHub
+.then(function(repositories){
+  console.log("Repositories:", repositories);
+   // Select the Projects section from the HTML
+  const projectSection=document.getElementById("projects");
+  const projectList=projectSection.querySelector("ul");
+  // Loop through each repository
+  for(let i=0; i<repositories.length; i++){
+    const project=document.createElement("li");
+    project.innerText=repositories[i].name;
+    projectList.appendChild(project); // Add the list item to the <ul>
+  }
+})
+.catch(function(error)
+{
+console.error("Error fetching repositories:", error);
+const projectSection=document.getElementById("Projects");
+projectSection.innerHTML+="<p>Unable to load projects at this time.<p>";
+});
