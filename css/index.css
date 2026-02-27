@@ -25,6 +25,7 @@ body {
     justify-content: center;
     padding-top: 1em;
     font-size: 2rem; 
+    
 }
 
 #navigation {
@@ -42,6 +43,7 @@ body {
   text-decoration: none;  /* remove underline */
   font-weight: 800;       /* bold */
   font-family: 'Poppins', sans-serif;
+  color:#4b2bbd;
 }
 
 .nav_container a:hover,
@@ -217,6 +219,104 @@ section{
   color: #4b2bbd;
 }
 
+/*----FORM LAYOUT ------*/
+#leaveMessage{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  max-width: 60%;
+  width: 100%;
+  margin: 2rem auto;
+
+  background-color: rgb(239, 236, 236);        
+  padding: 2rem;                    
+  border-radius: 12px;              
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); 
+}
+
+
+/* Labels */
+#leaveMessage label {
+  font-weight: bold;
+  color: #444;
+  margin-top: 8px;
+}
+
+/* Inputs and textarea */
+#leaveMessage input,
+#leaveMessage textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+
+/* Focus effect - input has nice boarder with the shade */
+#leaveMessage input:focus,
+#leaveMessage textarea:focus {
+  border-color: #4e73df;
+  box-shadow: 0 0 5px rgba(78, 115, 223, 0.5);
+  outline: none;
+}
+
+/* Textarea resize */
+#leaveMessage textarea {
+  resize: vertical;
+  min-height: 4rem;
+}
+
+/* Submit Button */
+#leaveMessage button {
+  
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #4e73df;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+/* Messages Section */
+#messages ul {
+  list-style: none;
+  padding: 0;
+}
+
+#messages li {
+  padding: 8px;
+  border: 1px solid #eee;
+  max-width: 60%;
+  width: 100%;
+  margin: 2rem auto;
+  background-color: rgb(239, 236, 236);  
+  font-size: 2rem;
+  white-space: normal;       /* allow text to wrap to new lines */
+  word-break: break-word;    /* break long words if needed */
+}
+
+.remove-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: rgb(236, 63, 97);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2rem;
+  
+}
+
+.remove-btn:hover {
+  background-color: rgb(211, 25, 224);
+  transform: scale(1.05);
+}
 
 /* ---MOBILE    VERSION    MEDIA QUERY -----*/
 

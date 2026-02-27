@@ -32,3 +32,66 @@ skill.innerText=skills[i];
  skillsList.appendChild(skill);
 }
 
+
+//  FUNCTION TO TOGGLE MESSAGES SECTION VISIBILITY 
+function toggleMessagesSection() {
+  // Get the Messages section
+  const messageSection = document.getElementById("messages");
+  
+  // Get the Message List
+  const messageList = messageSection.querySelector("ul");
+  
+  // If list length is 0, then hide the Messages section
+  if (messageList.children.length === 0) {
+    messageSection.style.display = "none";
+  } else {
+    messageSection.style.display = "block";
+  }
+}
+// Initially hide the messages section
+toggleMessagesSection();
+
+// FILL  IN  THE  FORM 
+const messageForm = document.getElementById('leaveMessage');
+
+messageForm.addEventListener("submit", function(event) {
+
+    event.preventDefault(); // Prevent page refresh 
+    // Access form field values using their "name" attributes:
+    const usersNameInput = event.target.usersName.value;
+    const usersEmailInput = event.target.usersEmail.value;
+    const usersMessageInput = event.target.usersMessage.value;
+    console.log(usersNameInput, usersEmailInput, usersMessageInput);
+
+    // Select Message section ELements
+    const messageSection=document.getElementById('messages');
+    const messageList=messageSection.querySelector('ul');
+     // Create a new Message element
+    const newMessage=document.createElement('li');
+    //Insert HTML inside the <li> , the name becomes a clickable email link
+    newMessage.innerHTML = `
+  <a href="mailto:${usersEmailInput}">${usersNameInput}</a>
+  <span> ${usersMessageInput} </span>
+`;
+  const removeButton=document.createElement('button');
+  removeButton.innerText='Remove';
+  removeButton.type="button";
+  removeButton.classList.add("remove-btn"); //give the class name to the Remove button to add styling
+  removeButton.addEventListener('click',function(event){
+    const entry = event.target.parentNode;  // parent <li> of the button
+    entry.remove();                         // remove it from the DOM
+  toggleMessagesSection(); // update visibility after removal 
+
+  })
+
+   // Append remove button to the <li>
+    newMessage.appendChild(removeButton);
+
+    // Append <li> to the <ul>
+    messageList.appendChild(newMessage);
+    toggleMessagesSection();//we display the message in visible now Messages section
+    // Reset the form
+    event.target.reset();
+
+});
+
